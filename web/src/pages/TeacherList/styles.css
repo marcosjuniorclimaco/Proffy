@@ -1,0 +1,67 @@
+#page-teacher-list {
+  height: 100vh;
+  width: 100vw;
+}
+
+#search-teachers {
+  margin-top: 3.2rem;
+}
+
+#search-teachers label {
+  color: var(--color-text-in-primary);
+}
+
+#search-teachers button {
+  align-items: center;
+  background: var(--color-secundary);
+  border-radius: 0.8rem;
+  border: 0;
+  color: var(--color-button-text);
+  cursor: pointer;
+  display: flex;
+  font: 700 1.6rem Archivo;
+  height: 5.6rem;
+  justify-content: center;
+  margin-top: 3.2rem;
+  text-decoration: none;
+  transition: background-color 0·2s;
+  width: 100%;
+}
+
+#page-teachers button:hover {
+  background: var(--color-secundary-dark);
+}
+
+#page-teacher-list main {
+  margin: 3.2rem auto;
+  width: 90%;
+}
+
+
+
+@media (min-width: 700px) {
+  #page-teacher-list {
+    max-width: 100%;
+  }
+
+  #search-teachers {
+    bottom: -60px;
+    column-gap:  16px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: absolute;
+  }
+
+  #search-teachers .input-block + .input-block,
+  #search-teachers .select-block + .select-block {
+    margin-top: 0;
+  }
+
+  #page-teacher-list main {
+    margin:  0 auto;
+    max-width: 740px;
+    padding: 3.2rem 0;
+  }
+}
+  
+
