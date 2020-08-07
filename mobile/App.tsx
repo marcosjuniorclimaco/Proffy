@@ -4,15 +4,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import Landing from './src/pages/Landing';
 import {AppLoading} from 'expo';
 
-import {Archivo_400Regular, Archivo_700Bold} from '@expo-google-fonts/archivo';
-import {Poppins_400Regular, Poppins_600SemiBold, useFonts} from '@expo-google-fonts/poppins';
+import {Archivo_400Regular, Archivo_700Bold, useFonts} from '@expo-google-fonts/archivo';
+import AppStack from './src/routes/AppStack';
+
 
 export default function App() {
   let [fontsLoaded] = useFonts({
     Archivo_400Regular,
     Archivo_700Bold,
-    Poppins_400Regular, 
-    Poppins_600SemiBold
+   
   });
 
   if (!fontsLoaded) {
@@ -20,8 +20,8 @@ export default function App() {
   } else {
     return (
       <>
-        <Landing />
-        <StatusBar style="light"/>
+        <AppStack />
+        <StatusBar style="light" />
   
       </>
     );
